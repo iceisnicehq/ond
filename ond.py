@@ -17,10 +17,10 @@ while (choice.lower()!="no"):
     match choice:
         case "1": 
             print("υ=(4*Q)/(π*d^2)")
-            q = float(input("Q = "))
-            q = q/360
-            d = float(input("d = "))
-            d = d*0.001
+            q = float(input("Q = ")/360)
+            # q = q/360
+            d = float(0.001*input("d = "))
+            # d = d*0.001
             print("υ = ", 4*float(q)/(math.pi*float(d)**2))
         case "2":
             print("ν=μ/ρ")
@@ -30,18 +30,18 @@ while (choice.lower()!="no"):
         case "3":
             print("Re=(υ*d/ν)")
             v = input("υ = ")
-            d = input("d = ")
+            d = float(0.001*input("d = "))
             nu = input("ν = ")
             print("Re = ", float(v)*float(d)/(float(nu)))
         case "4":
             print ("ε=Δ/d")
             delta = input("Δ = ")
-            d = input("d = ")
+            d = float(0.001*input("d = "))
             print("ε= ", float(delta)/float(d))
         case "5":
             print("i = λ*(1/d)*(υ^2/2g)")
             hy_lambda = float(input("λ = "))
-            d = float(input("d = "))
+            d = float(0.001*input("d = "))
             nu = input("ν = ")
             g = 9.8
             print("i = ", hy_lambda*(1/d)*(float(nu)**2/(2*g)))
