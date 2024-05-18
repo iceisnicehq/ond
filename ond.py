@@ -17,7 +17,7 @@ while (choice.lower()!="no"):
     match choice:
         case "1": 
             print("υ=(4*Q)/(π*d^2)")
-            q = float(input("Q = "))/360
+            q = float(input("Q = "))/3600
             # q = q/360
             d = float(input("d = "))*0.001
             # d = d*0.001
@@ -29,22 +29,22 @@ while (choice.lower()!="no"):
             print("ν = ", float(mu)/float(rho))
         case "3":
             print("Re=(υ*d/ν)")
-            v = input("υ = ")
+            v = (input("υ = "))
             d = float(input("d = "))*0.001
-            nu = input("ν = ")
+            nu = eval(input("ν = "))
             print("Re = ", float(v)*float(d)/(float(nu)))
         case "4":
             print ("ε=Δ/d")
             delta = input("Δ = ")
-            d = float(input("d = "))*0.001
+            d = input("d = ")
             print("ε= ", float(delta)/float(d))
         case "5":
             print("i = λ*(1/d)*(υ^2/2g)")
             hy_lambda = float(input("λ = "))
             d = float(input("d = "))*0.001
-            nu = input("ν = ")
+            v = float(input("ν = "))
             g = 9.8
-            print("i = ", hy_lambda*(1/d)*(float(nu)**2/(2*g)))
+            print("i = ", hy_lambda*(1/d)*(float(v)**2/(2*g)))
 
 
     choice = input("Choose equation or type \"no\": ")
